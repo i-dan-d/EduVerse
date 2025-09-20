@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <title>Nghiên cứu khoa học - arXiv Research</title>
+    <link rel="stylesheet" href="styles/main.css?v=2.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Inline CSS fallback để đảm bảo styling hoạt động */
+        .research-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        .research-header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .research-header h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .research-header p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .back-btn {
+            position: absolute;
+            left: 2rem;
+            top: 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="research-container">
+        <!-- Navigation Header -->
+        <header class="main-header">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <!-- Logo -->
+                    <div class="nav-logo">
+                        <i class="fas fa-atom"></i>
+                        <span class="logo-text">EduVerse</span>
+                    </div>
+                    
+                    <!-- Desktop Menu -->
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="home.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                <span>Trang chủ</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Game học tập</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="lab.html" class="nav-link">
+                                <i class="fas fa-flask"></i>
+                                <span>Phòng thí nghiệm</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="research.html" class="nav-link active">
+                                <i class="fas fa-search"></i>
+                                <span>Nghiên cứu khoa học</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <div class="mobile-menu-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Page Header -->
+        <header class="research-header">
+            <div class="header-content">
+                <h1><i class="fas fa-search"></i> Nghiên cứu khoa học</h1>
+                <p>Tra cứu bài báo khoa học từ arXiv - Kho tài liệu nghiên cứu hàng đầu thế giới</p>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-form">
+                    <div class="search-input-group">
+                        <input type="text" id="searchQuery" placeholder="Nhập từ khóa tìm kiếm (tiếng Anh)..." 
+                               value="quantum mechanics">
+                        <button id="searchBtn" class="search-btn">
+                            <i class="fas fa-search"></i>
+                            <span>Tìm kiếm</span>
+                        </button>
+                    </div>
+                    
+                    <div class="search-filters">
+                        <div class="filter-group">
+                            <label for="subjectFilter">Lĩnh vực:</label>
+                            <select id="subjectFilter">
+                                <option value="">Tất cả</option>
+                                <option value="math">Toán học (Mathematics)</option>
+                                <option value="physics">Vật lý (Physics)</option>
+                                <option value="cs">Khoa học máy tính (Computer Science)</option>
+                                <option value="q-bio">Sinh học (Biology)</option>
+                                <option value="stat">Thống kê (Statistics)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="sortBy">Sắp xếp:</label>
+                            <select id="sortBy">
+                                <option value="relevance">Liên quan</option>
+                                <option value="lastUpdatedDate">Mới nhất</option>
+                                <option value="submittedDate">Ngày đăng</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="maxResults">Số kết quả:</label>
+                            <select id="maxResults">
+                                <option value="10">10</option>
+                                <option value="25" selected>25</option>
+                                <option value="50">50</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search-suggestions">
+                    <h3>Gợi ý tìm kiếm phổ biến:</h3>
+                    <div class="suggestion-tags">
+                        <span class="suggestion-tag" data-query="quantum mechanics">Cơ học lượng tử</span>
+                        <span class="suggestion-tag" data-query="machine learning">Học máy</span>
+                        <span class="suggestion-tag" data-query="calculus">Giải tích</span>
+                        <span class="suggestion-tag" data-query="linear algebra">Đại số tuyến tính</span>
+                        <span class="suggestion-tag" data-query="thermodynamics">Nhiệt động học</span>
+                        <span class="suggestion-tag" data-query="artificial intelligence">Trí tuệ nhân tạo</span>
+                        <span class="suggestion-tag" data-query="probability theory">Lý thuyết xác suất</span>
+                        <span class="suggestion-tag" data-query="organic chemistry">Hóa học hữu cơ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading -->
+        <div id="loadingSpinner" class="loading-container" style="display: none;">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <p>Đang tìm kiếm bài báo khoa học...</p>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-header">
+                <h2 id="resultsTitle">Kết quả tìm kiếm</h2>
+                <div class="results-meta">
+                    <span id="resultsCount">0 kết quả</span>
+                    <span class="api-info">
+                        <i class="fas fa-info-circle"></i>
+                        Dữ liệu từ arXiv.org
+                    </span>
+                </div>
+            </div>
+            
+            <div id="resultsContainer" class="results-grid">
+                <!-- Results will be populated here -->
+            </div>
+            
+            <div class="load-more-container">
+                <button id="loadMoreBtn" class="load-more-btn" style="display: none;">
+                    <i class="fas fa-plus"></i>
+                    Tải thêm kết quả
+                </button>
+            </div>
+        </section>
+
+        <!-- API Information Modal -->
+        <div id="apiInfoModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-code"></i> Thông tin arXiv API</h3>
+                    <button class="close-modal-btn" onclick="closeApiModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="api-section">
+                        <h4>📡 Endpoint API</h4>
+                        <code>https://export.arxiv.org/api/query</code>
+                        
+                        <h4>🔧 Tham số request</h4>
+                        <ul>
+                            <li><strong>search_query:</strong> Từ khóa tìm kiếm</li>
+                            <li><strong>start:</strong> Vị trí bắt đầu (pagination)</li>
+                            <li><strong>max_results:</strong> Số kết quả tối đa</li>
+                            <li><strong>sortBy:</strong> Cách sắp xếp (relevance, lastUpdatedDate, submittedDate)</li>
+                            <li><strong>sortOrder:</strong> Thứ tự (ascending, descending)</li>
+                        </ul>
+                        
+                        <h4>📝 Định dạng dữ liệu</h4>
+                        <p>API trả về dữ liệu dạng XML/Atom feed với các thông tin:</p>
+                        <ul>
+                            <li><strong>Title:</strong> Tiêu đề bài báo</li>
+                            <li><strong>Authors:</strong> Tác giả</li>
+                            <li><strong>Abstract:</strong> Tóm tắt</li>
+                            <li><strong>Published:</strong> Ngày xuất bản</li>
+                            <li><strong>Categories:</strong> Danh mục chuyên ngành</li>
+                            <li><strong>PDF Link:</strong> Liên kết file PDF</li>
+                        </ul>
+                        
+                        <h4>🎓 Hiển thị cho học sinh</h4>
+                        <p>Dữ liệu được xử lý và hiển thị thân thiện với học sinh THCS/THPT:</p>
+                        <ul>
+                            <li>Tóm tắt đơn giản hóa</li>
+                            <li>Phân loại theo môn học</li>
+                            <li>Gợi ý ứng dụng thực tế</li>
+                            <li>Từ khóa và khái niệm chính</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paper Detail Modal -->
+        <div id="paperModal" class="modal">
+            <div class="modal-content paper-modal-content">
+                <div class="modal-header">
+                    <h3 id="paperModalTitle">Chi tiết bài báo</h3>
+                    <button class="close-modal-btn" onclick="closePaperModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body" id="paperModalBody">
+                    <!-- Paper details will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="research-footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <button onclick="showApiInfo()" class="footer-btn">
+                        <i class="fas fa-info-circle"></i>
+                        Thông tin API
+                    </button>
+                    <a href="https://arxiv.org" target="_blank" class="footer-btn">
+                        <i class="fas fa-external-link-alt"></i>
+                        Truy cập arXiv.org
+                    </a>
+                </div>
+                <p class="footer-text">
+                    <i class="fas fa-graduation-cap"></i>
+                    Dữ liệu nghiên cứu từ arXiv - Hỗ trợ học tập và nghiên cứu khoa học
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js?v=1.0"></script>
+    <script src="js/arxiv-api.js?v=1.0"></script>
+    <script src="js/research.js?v=1.0"></script>
+</body>
+</html>

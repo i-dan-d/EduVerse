@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <title>Phòng Lab - Mô hình PHET</title>
+    
+    <!-- Disable Grammarly -->
+    <meta name="grammarly-disable-ghost" content="true">
+    <meta name="grammarly-disable-indicator" content="true">
+    <meta name="grammarly-disable-extension" content="true">
+    <meta name="grammarly-disable-extension-ghost" content="true">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <i class="fas fa-atom"></i>
+                    <span class="logo-text">EduVerse</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Game học tập</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="lab.html" class="nav-link active">
+                            <i class="fas fa-flask"></i>
+                            <span>Phòng thí nghiệm</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="research.html" class="nav-link">
+                            <i class="fas fa-search"></i>
+                            <span>Nghiên cứu khoa học</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="lab-container">
+        
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="screen active">
+            <div class="welcome-content">
+                <h1>🔬 Phòng Lab</h1>
+                <p>Khám phá các mô hình thí nghiệm tương tác</p>
+                
+                <div class="subject-grid">
+                    <!-- Toán học -->
+                    <div class="subject-card" data-subject="math">
+                        <div class="subject-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Toán học</h3>
+                        <p>Đại số, Hình học, Thống kê</p>
+                        <div class="level-badges">
+                            <span class="badge">THCS</span>
+                            <span class="badge">THPT</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Vật lý -->
+                    <div class="subject-card" data-subject="physics">
+                        <div class="subject-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>Vật lý</h3>
+                        <p>Cơ học, Điện học, Quang học</p>
+                        <div class="level-badges">
+                            <span class="badge">THCS</span>
+                            <span class="badge">THPT</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Hóa học -->
+                    <div class="subject-card" data-subject="chemistry">
+                        <div class="subject-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Hóa học</h3>
+                        <p>Phản ứng, Cấu trúc, Tính chất</p>
+                        <div class="level-badges">
+                            <span class="badge">THCS</span>
+                            <span class="badge">THPT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Level Selection Screen -->
+        <div id="levelScreen" class="screen">
+            <div class="level-content">
+                <div class="breadcrumb">
+                    <span class="breadcrumb-item active">Trang chủ</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-item" id="breadcrumbSubject">Môn học</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-item">Cấp độ</span>
+                </div>
+                
+                <div class="screen-header">
+                    <button id="backToWelcome" class="back-btn">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Quay lại</span>
+                    </button>
+                    <h2 id="selectedSubject">Chọn cấp độ</h2>
+                </div>
+                
+                <div class="level-grid">
+                    <div class="level-card" data-level="thcs">
+                        <div class="level-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>THCS</h3>
+                        <p>Trung học cơ sở (Lớp 6-9)</p>
+                    </div>
+                    
+                    <div class="level-card" data-level="thpt">
+                        <div class="level-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>THPT</h3>
+                        <p>Trung học phổ thông (Lớp 10-12)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Math Models Screen -->
+        <div id="mathModelsScreen" class="screen">
+            <div class="models-content">
+                <div class="breadcrumb">
+                    <span class="breadcrumb-item">Trang chủ</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-item active">Toán học</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-item" id="mathBreadcrumbLevel">Cấp độ</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-item">Mô hình</span>
+                </div>
+                
+                <div class="screen-header">
+                    <button class="back-btn" onclick="showScreen('levelScreen')">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Quay lại</span>
+                    </button>
+                    <h2 id="mathModelsTitle">Mô hình PHET - Toán học</h2>
+                </div>
+                
+                <div id="mathModelsGrid" class="models-grid">
+                    <!-- Math models will be loaded here -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Physics Models Screen -->
+        <div id="physicsModelsScreen" class="screen">
+            <div class="models-content">
+                <div class="breadcrumb">
+                    <span class="breadcrumb-item">Trang chủ</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-item active">Vật lý</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-item" id="physicsBreadcrumbLevel">Cấp độ</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-item">Mô hình</span>
+                </div>
+                
+                <div class="screen-header">
+                    <button class="back-btn" onclick="showScreen('levelScreen')">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Quay lại</span>
+                    </button>
+                    <h2 id="physicsModelsTitle">Mô hình PHET - Vật lý</h2>
+                </div>
+                
+                <div id="physicsModelsGrid" class="models-grid">
+                    <!-- Physics models will be loaded here -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chemistry Models Screen -->
+        <div id="chemistryModelsScreen" class="screen">
+            <div class="models-content">
+                <div class="breadcrumb">
+                    <span class="breadcrumb-item">Trang chủ</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-item active">Hóa học</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-item" id="chemistryBreadcrumbLevel">Cấp độ</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="breadcrumb-item">Mô hình</span>
+                </div>
+                
+                <div class="screen-header">
+                    <button class="back-btn" onclick="showScreen('levelScreen')">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Quay lại</span>
+                    </button>
+                    <h2 id="chemistryModelsTitle">Mô hình PHET - Hóa học</h2>
+                </div>
+                
+                <div id="chemistryModelsGrid" class="models-grid">
+                    <!-- Chemistry models will be loaded here -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- PHET Simulation Modal -->
+        <div id="phetModal" class="phet-modal">
+            <div class="phet-modal-content">
+                <div class="phet-modal-header">
+                    <h3 id="phetModalTitle">PHET Simulation</h3>
+                    <button id="closePhetModal" class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="phet-modal-body">
+                    <div class="phet-loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Đang tải simulation...</p>
+                    </div>
+                    <iframe id="phetIframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="phet-modal-footer">
+                    <button id="openInNewTab" class="btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Mở trong tab mới
+                    </button>
+                    <button id="fullscreenBtn" class="btn-primary">
+                        <i class="fas fa-expand"></i>
+                        Toàn màn hình
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <i class="fas fa-atom"></i>
+                    <span>EduVerse</span>
+                </div>
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="home.html" class="mobile-nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Trang chủ</span>
+                </a>
+                <a href="index.html" class="mobile-nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Game học tập</span>
+                </a>
+                <a href="lab.html" class="mobile-nav-link active">
+                    <i class="fas fa-flask"></i>
+                    <span>Phòng thí nghiệm</span>
+                </a>
+                <a href="research.html" class="mobile-nav-link">
+                    <i class="fas fa-search"></i>
+                    <span>Nghiên cứu khoa học</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js?v=1.0"></script>
+    <script src="js/lab.js?v=1.1"></script>
+</body>
+</html>

@@ -1,0 +1,624 @@
+  <!DOCTYPE html>
+<html lang="vi">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Game Học Tập - Toán Lý Hóa</title>
+    <link rel="stylesheet" href="styles/main.css?v=2.1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Game học tập Toán, Lý, Hóa cho học sinh THCS và THPT">
+    <meta name="keywords" content="game học tập, toán, lý, hóa, thcs, thpt">
+    
+    <!-- PWA and Security -->
+    <meta name="theme-color" content="#4F46E5">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Disable Chrome's password autofill warnings -->
+    <meta name="google" content="notranslate">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    </head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>Đang tải game...</h2>
+            <p>Chuẩn bị trải nghiệm học tập thú vị!</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <i class="fas fa-atom"></i>
+                    <span class="logo-text">EduVerse</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Game học tập</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="lab.html" class="nav-link">
+                            <i class="fas fa-flask"></i>
+                            <span>Phòng thí nghiệm</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="research.html" class="nav-link">
+                            <i class="fas fa-search"></i>
+                            <span>Nghiên cứu khoa học</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- User Info Panel -->
+    <div class="user-info-panel">
+        <div class="container">
+            <div class="user-info">
+                <div class="score-display">
+                    <i class="fas fa-star"></i>
+                    <span id="totalScore">0</span>
+                </div>
+                <div class="level-display">
+                    <i class="fas fa-trophy"></i>
+                    <span id="currentLevel">1</span>
+                </div>
+                <div class="streak-display">
+                    <i class="fas fa-fire"></i>
+                    <span id="streakCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Screen -->
+            <div id="welcomeScreen" class="screen active">
+                <div class="welcome-content">
+                    <div class="welcome-header">
+                        <h2>Chào mừng đến với Game Học Tập!</h2>
+                        <p>Chọn môn học và cấp độ để bắt đầu cuộc phiêu lưu học tập</p>
+                    </div>
+
+                    <!-- Subject Selection -->
+                    <div class="subject-selection">
+                        <h3>Chọn môn học</h3>
+                        <div class="subject-cards">
+                            <div class="subject-card" data-subject="math">
+                                <div class="subject-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <h4>Toán học</h4>
+                                <p>Rèn luyện tư duy logic và tính toán</p>
+                            </div>
+                            <div class="subject-card" data-subject="physics">
+                                <div class="subject-icon">
+                                    <i class="fas fa-atom"></i>
+                                </div>
+                                <h4>Vật lý</h4>
+                                <p>Khám phá thế giới vật chất và năng lượng</p>
+                            </div>
+                            <div class="subject-card" data-subject="chemistry">
+                                <div class="subject-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <h4>Hóa học</h4>
+                                <p>Tìm hiểu về các phản ứng hóa học</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Level Selection -->
+                    <div class="level-selection">
+                        <h3>Chọn cấp độ</h3>
+                        <div class="level-buttons">
+                            <button class="level-btn" data-level="thcs">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>THCS</span>
+                                <small>Lớp 6-9</small>
+                            </button>
+                            <button class="level-btn" data-level="thpt">
+                                <i class="fas fa-university"></i>
+                                <span>THPT</span>
+                                <small>Lớp 10-12</small>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Game Settings -->
+                    <div class="game-settings">
+                        <h3>⚙️ Cài đặt game</h3>
+                        <div class="settings-grid">
+                            <div class="setting-item">
+                                <label for="questionCount">
+                                    <i class="fas fa-question-circle"></i>
+                                    Số câu hỏi:
+                                </label>
+                                <select id="questionCount" class="setting-select">
+                                    <option value="5">5 câu</option>
+                                    <option value="10" selected>10 câu</option>
+                                    <option value="15">15 câu</option>
+                                    <option value="20">20 câu</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label for="timeLimit">
+                                    <i class="fas fa-clock"></i>
+                                    Thời gian mỗi câu:
+                                </label>
+                                <select id="timeLimit" class="setting-select">
+                                    <option value="30">30 giây</option>
+                                    <option value="60" selected>60 giây</option>
+                                    <option value="90">90 giây</option>
+                                    <option value="120">120 giây</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label for="difficulty">
+                                    <i class="fas fa-chart-line"></i>
+                                    Độ khó:
+                                </label>
+                                <select id="difficulty" class="setting-select">
+                                    <option value="easy">🟢 Dễ</option>
+                                    <option value="medium" selected>🟡 Trung bình</option>
+                                    <option value="hard">🔴 Khó</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Settings Preview -->
+                        <div class="settings-preview">
+                            <div class="preview-item">
+                                <span class="preview-label">Tổng thời gian:</span>
+                                <span class="preview-value" id="totalTimePreview">10 phút</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="preview-label">Độ khó hiện tại:</span>
+                                <span class="preview-value" id="difficultyPreview">🟡 Trung bình</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="startGameBtn" class="start-btn" disabled>
+                            <i class="fas fa-play"></i>
+                            <span>Bắt đầu chơi</span>
+                            <div class="btn-shine"></div>
+                        </button>
+                        
+                        <a href="lab.html" class="lab-btn">
+                            <i class="fas fa-flask"></i>
+                            <span>Phòng Lab</span>
+                            <div class="btn-shine"></div>
+                            <div class="lab-badge">NEW</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Screen -->
+            <div id="gameScreen" class="screen">
+                <div class="game-header">
+                    <div class="game-info">
+                        <div class="question-counter">
+                            <i class="fas fa-list-ol"></i>
+                            <span id="questionNumber">1</span> / <span id="totalQuestions">10</span>
+                        </div>
+                        <div class="timer">
+                            <i class="fas fa-clock"></i>
+                            <span id="timer">60</span>s
+                        </div>
+                        <div class="score-display">
+                            <i class="fas fa-star"></i>
+                            <span id="currentScore">0</span> điểm
+                        </div>
+                    </div>
+                    <div class="difficulty-indicator">
+                        <span class="difficulty-badge medium" id="currentDifficulty">🟡 Trung bình</span>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-content">
+                        <div id="questionText" class="question-text">
+                            <!-- Question will be loaded here -->
+                        </div>
+                        <div id="questionImage" class="question-image" style="display: none;">
+                            <img src="" alt="Question image">
+                        </div>
+                    </div>
+
+                    <div id="answerOptions" class="answer-options">
+                        <!-- Answer options will be loaded here -->
+                    </div>
+
+                    <div class="game-controls">
+                        <button id="hintBtn" class="control-btn hint-btn">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Gợi ý</span>
+                            <span class="hint-count" id="hintCount">3</span>
+                        </button>
+                        <button id="nextQuestionBtn" class="control-btn next-btn" style="display: none;">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Câu tiếp theo</span>
+                        </button>
+                        <div class="game-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span id="correctCount">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-times-circle"></i>
+                                <span id="wrongCount">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-fire"></i>
+                                <span id="streakCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progressBar" class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="resultsScreen" class="screen">
+                <div class="results-content">
+                    <div class="results-header">
+                        <h2>Kết quả game</h2>
+                        <div class="final-score">
+                            <span id="finalScore">0</span>
+                            <small>điểm</small>
+                        </div>
+                    </div>
+
+                    <div class="results-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span class="stat-value" id="correctAnswers">0</span>
+                            <span class="stat-label">Câu đúng</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-times-circle"></i>
+                            <span class="stat-value" id="wrongAnswers">0</span>
+                            <span class="stat-label">Câu sai</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-fire"></i>
+                            <span class="stat-value" id="maxStreak">0</span>
+                            <span class="stat-label">Chuỗi dài nhất</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <span class="stat-value" id="timeUsed">0</span>
+                            <span class="stat-label">Thời gian</span>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button id="playAgainBtn" class="action-btn primary">
+                            <i class="fas fa-redo"></i>
+                            <span>Chơi lại</span>
+                        </button>
+                        <button id="changeSubjectBtn" class="action-btn secondary">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Đổi môn</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Game Học Tập. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data/questions.js?v=1.9"></script>
+    <script src="js/core/shuffle.js?v=1.9"></script>
+    <script src="js/core/storage.js?v=1.9"></script>
+    <script src="js/core/animations.js?v=1.9"></script>
+    <script src="js/core/achievements.js?v=1.9"></script>
+    <script src="js/core/analytics.js?v=1.9"></script>
+    <script src="js/core/ai.js?v=1.9"></script>
+    <script src="js/core/question-manager.js?v=1.9"></script>
+    <script src="js/core/engine.js?v=1.9"></script>
+    <script src="js/modules/math.js?v=1.9"></script>
+    <script src="js/modules/physics.js?v=1.9"></script>
+    <script src="js/modules/chemistry.js?v=1.9"></script>
+    <script src="js/ui/manager.js?v=1.9"></script>
+    <script src="js/app.js?v=1.9"></script>
+    
+    
+    <!-- Settings Preview Script -->
+    <script>
+        // Update settings preview in real-time
+        function updateSettingsPreview() {
+            const questionCount = parseInt(document.getElementById('questionCount')?.value) || 10;
+            const timeLimit = parseInt(document.getElementById('timeLimit')?.value) || 60;
+            const difficulty = document.getElementById('difficulty')?.value || 'medium';
+            
+            // Calculate total time
+            const totalSeconds = questionCount * timeLimit;
+            const totalMinutes = Math.floor(totalSeconds / 60);
+            const remainingSeconds = totalSeconds % 60;
+            
+            let totalTimeText = '';
+            if (totalMinutes > 0) {
+                totalTimeText = `${totalMinutes} phút`;
+                if (remainingSeconds > 0) {
+                    totalTimeText += ` ${remainingSeconds} giây`;
+                }
+            } else {
+                totalTimeText = `${totalSeconds} giây`;
+            }
+            
+            // Update preview
+            const totalTimePreview = document.getElementById('totalTimePreview');
+            const difficultyPreview = document.getElementById('difficultyPreview');
+            
+            if (totalTimePreview) {
+                totalTimePreview.textContent = totalTimeText;
+            }
+            
+            if (difficultyPreview) {
+                const difficultyMap = {
+                    'easy': '🟢 Dễ',
+                    'medium': '🟡 Trung bình',
+                    'hard': '🔴 Khó'
+                };
+                difficultyPreview.textContent = difficultyMap[difficulty] || '🟡 Trung bình';
+            }
+        }
+        
+        // Add event listeners for settings changes
+        document.addEventListener('DOMContentLoaded', function() {
+            const questionCount = document.getElementById('questionCount');
+            const timeLimit = document.getElementById('timeLimit');
+            const difficulty = document.getElementById('difficulty');
+            
+            if (questionCount) {
+                questionCount.addEventListener('change', updateSettingsPreview);
+            }
+            if (timeLimit) {
+                timeLimit.addEventListener('change', updateSettingsPreview);
+            }
+            if (difficulty) {
+                difficulty.addEventListener('change', updateSettingsPreview);
+            }
+            
+            // Initial update
+            updateSettingsPreview();
+        });
+    </script>
+    
+    <!-- Cache Clear Script -->
+    <script>
+        // Force clear cache
+        if ('caches' in window) {
+            caches.keys().then(function(names) {
+                for (let name of names) {
+                    caches.delete(name);
+                }
+            });
+        }
+        
+        // Clear localStorage if needed
+        if (localStorage.getItem('force_clear_cache') === 'true') {
+            localStorage.clear();
+            localStorage.removeItem('force_clear_cache');
+        }
+    </script>
+    
+    <!-- Initialization Script -->
+    <script>
+        // Global error handling to suppress browser extension warnings
+        window.addEventListener('error', function(e) {
+            // Suppress runtime.lastError warnings from browser extensions
+            if (e.message && e.message.includes('runtime.lastError')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+        
+        // Suppress unhandled promise rejections from extensions
+        window.addEventListener('unhandledrejection', function(e) {
+            if (e.reason && e.reason.message && e.reason.message.includes('message port')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+        
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('🔧 Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('🔧 Service Worker registration failed:', error);
+                    });
+            });
+        }
+        
+        // Initialize app when page loads
+        window.addEventListener('load', function() {
+            console.log('🚀 Page loaded, initializing app...');
+            
+            // Debug: Check all modules
+            console.log('🔍 Debug: Checking modules...');
+            console.log('ShuffleEngine:', !!window.ShuffleEngine);
+            console.log('StorageManager:', !!window.StorageManager);
+            console.log('AnimationManager:', !!window.AnimationManager);
+            console.log('AchievementSystem:', !!window.AchievementSystem);
+            console.log('GameEngine:', !!window.GameEngine);
+            console.log('UIManager:', !!window.UIManager);
+            console.log('MathModule:', !!window.MathModule);
+            console.log('PhysicsModule:', !!window.PhysicsModule);
+            console.log('ChemistryModule:', !!window.ChemistryModule);
+            console.log('GameApp:', !!window.GameApp);
+            console.log('QUESTIONS_DATA:', !!window.QUESTIONS_DATA);
+            
+            // Hide loading screen after a short delay
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                if (loadingScreen) {
+                    loadingScreen.style.display = 'none';
+                }
+            }, 1000);
+            
+            // Initialize app
+            if (window.GameApp) {
+                window.GameApp.initialize().then(() => {
+                    console.log('✅ App initialized successfully');
+                }).catch((error) => {
+                    console.error('❌ Failed to initialize app:', error);
+                    // Show error message
+                    const errorDiv = document.createElement('div');
+                    errorDiv.innerHTML = `
+                        <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                                     background: #dc3545; color: white; padding: 20px; border-radius: 8px; 
+                                     z-index: 10000; text-align: center;">
+                            <h3>Lỗi khởi tạo</h3>
+                            <p>${error.message}</p>
+                            <button onclick="location.reload()" style="background: white; color: #dc3545; 
+                                     border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 10px;">
+                                Tải lại trang
+                            </button>
+                        </div>
+                    `;
+                    document.body.appendChild(errorDiv);
+                });
+            } else {
+                console.error('❌ GameApp not found');
+                // Show error message
+                const errorDiv = document.createElement('div');
+                errorDiv.innerHTML = `
+                    <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                                 background: #dc3545; color: white; padding: 20px; border-radius: 8px; 
+                                 z-index: 10000; text-align: center;">
+                        <h3>Lỗi khởi tạo</h3>
+                        <p>GameApp không được tìm thấy</p>
+                        <button onclick="location.reload()" style="background: white; color: #dc3545; 
+                                 border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 10px;">
+                            Tải lại trang
+                        </button>
+                    </div>
+                `;
+                document.body.appendChild(errorDiv);
+            }
+            
+            // Test button functionality
+            const testBtn = document.getElementById('testBtn');
+            if (testBtn) {
+                testBtn.addEventListener('click', function() {
+                    console.log('🧪 Test button clicked');
+                    
+                    // Test basic functionality
+                    console.log('🧪 Testing modules...');
+                    console.log('GameApp available:', !!window.GameApp);
+                    console.log('UIManager available:', !!window.UIManager);
+                    console.log('GameEngine available:', !!window.GameEngine);
+                    console.log('QuestionDatabase available:', !!window.QuestionDatabase);
+                    
+                    // Test question generation
+                    if (window.MathModule) {
+                        const testQuestion = window.MathModule.generateQuestion('thcs', 'easy');
+                        console.log('🧪 Test question generated:', testQuestion);
+                    }
+                    
+                    // Test shuffle
+                    if (window.ShuffleEngine) {
+                        const testArray = [1, 2, 3, 4];
+                        const shuffled = window.ShuffleEngine.shuffleArray(testArray);
+                        console.log('🧪 Test shuffle:', { original: testArray, shuffled });
+                    }
+                    
+                    alert('Test completed! Check console for results.');
+                });
+            }
+        });
+    </script>
+    <!-- Navigation Script -->
+    <script src="js/navigation.js?v=1.0"></script>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <i class="fas fa-atom"></i>
+                    <span>EduVerse</span>
+                </div>
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="home.html" class="mobile-nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Trang chủ</span>
+                </a>
+                <a href="index.html" class="mobile-nav-link active">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Game học tập</span>
+                </a>
+                <a href="lab.html" class="mobile-nav-link">
+                    <i class="fas fa-flask"></i>
+                    <span>Phòng thí nghiệm</span>
+                </a>
+                <a href="research.html" class="mobile-nav-link">
+                    <i class="fas fa-search"></i>
+                    <span>Nghiên cứu khoa học</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

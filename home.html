@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <title>EduVerse - Nền tảng học tập toàn diện</title>
+    <meta name="description" content="EduVerse - Nền tảng học tập hiện đại cho Toán, Lý, Hóa với game tương tác, thí nghiệm ảo và nghiên cứu khoa học">
+    <meta name="keywords" content="học toán, học lý, học hóa, game giáo dục, thí nghiệm ảo, nghiên cứu khoa học, THCS, THPT">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css?v=3.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <i class="fas fa-atom"></i>
+                    <span class="logo-text">EduVerse</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Game học tập</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="lab.html" class="nav-link">
+                            <i class="fas fa-flask"></i>
+                            <span>Phòng thí nghiệm</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="research.html" class="nav-link">
+                            <i class="fas fa-search"></i>
+                            <span>Nghiên cứu khoa học</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="floating-elements">
+                <div class="floating-icon" style="--delay: 0s; --duration: 6s;">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <div class="floating-icon" style="--delay: 2s; --duration: 8s;">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <div class="floating-icon" style="--delay: 4s; --duration: 7s;">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <div class="floating-icon" style="--delay: 1s; --duration: 9s;">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <div class="floating-icon" style="--delay: 3s; --duration: 5s;">
+                    <i class="fas fa-rocket"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">EduVerse</span>
+                    <br>Khám phá vũ trụ kiến thức
+                </h1>
+                <p class="hero-subtitle">
+                    Nền tảng học tập hiện đại kết hợp game tương tác, thí nghiệm ảo và nghiên cứu khoa học. 
+                    Biến việc học Toán - Lý - Hóa thành hành trình khám phá thú vị.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Câu hỏi game</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Thí nghiệm ảo</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Bài báo khoa học</div>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        Bắt đầu học ngay
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <i class="fas fa-info-circle"></i>
+                        Tìm hiểu thêm
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="card-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Tích lũy kiến thức</span>
+                    </div>
+                    <div class="progress-ring">
+                        <svg width="120" height="120">
+                            <circle cx="60" cy="60" r="54" fill="none" stroke="#e2e8f0" stroke-width="12"/>
+                            <circle cx="60" cy="60" r="54" fill="none" stroke="#667eea" stroke-width="12" 
+                                    stroke-dasharray="339.29" stroke-dashoffset="101.79" 
+                                    stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                        </svg>
+                        <div class="progress-text">
+                            <span class="progress-number">70%</span>
+                            <span class="progress-label">Hoàn thành</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tính năng nổi bật</h2>
+                <p class="section-subtitle">Trải nghiệm học tập toàn diện với công nghệ hiện đại</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Game Learning -->
+                <div class="feature-card" data-feature="game">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Game học tập tương tác</h3>
+                        <p class="feature-description">
+                            Học qua chơi với hệ thống game hóa hoàn chỉnh. Tích lũy điểm số, 
+                            mở khóa thành tựu và thách thức bản thân qua các cấp độ khó dần.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Hệ thống điểm số và ranking</li>
+                            <li><i class="fas fa-check"></i> Thành tựu và huy hiệu</li>
+                            <li><i class="fas fa-check"></i> Chế độ thách đấu</li>
+                            <li><i class="fas fa-check"></i> AI cá nhân hóa</li>
+                        </ul>
+                        <a href="index.html" class="feature-link">
+                            Khám phá ngay <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Virtual Lab -->
+                <div class="feature-card" data-feature="lab">
+                    <div class="feature-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Phòng thí nghiệm ảo</h3>
+                        <p class="feature-description">
+                            Thực hành thí nghiệm an toàn với các mô phỏng PHET Colorado. 
+                            Khám phá hiện tượng vật lý, phản ứng hóa học và mô hình toán học.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> 50+ thí nghiệm tương tác</li>
+                            <li><i class="fas fa-check"></i> Mô phỏng thực tế</li>
+                            <li><i class="fas fa-check"></i> Hướng dẫn chi tiết</li>
+                            <li><i class="fas fa-check"></i> Báo cáo kết quả</li>
+                        </ul>
+                        <a href="lab.html" class="feature-link">
+                            Vào phòng lab <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Research Platform -->
+                <div class="feature-card" data-feature="research">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Nghiên cứu khoa học</h3>
+                        <p class="feature-description">
+                            Tiếp cận kho tài liệu khoa học arXiv với hàng triệu bài báo. 
+                            Tìm hiểu xu hướng nghiên cứu mới nhất và ý tưởng dự án KHKT.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Tìm kiếm thông minh</li>
+                            <li><i class="fas fa-check"></i> Tóm tắt dễ hiểu</li>
+                            <li><i class="fas fa-check"></i> Gợi ý dự án KHKT</li>
+                            <li><i class="fas fa-check"></i> Chia sẻ và lưu trữ</li>
+                        </ul>
+                        <a href="research.html" class="feature-link">
+                            Bắt đầu nghiên cứu <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="subjects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Môn học</h2>
+                <p class="section-subtitle">Học tập toàn diện với chương trình THCS - THPT</p>
+            </div>
+            
+            <div class="subjects-grid">
+                <div class="subject-card math">
+                    <div class="subject-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="subject-title">Toán học</h3>
+                    <p class="subject-description">
+                        Từ đại số cơ bản đến giải tích nâng cao. Khám phá vẻ đẹp của toán học 
+                        qua bài tập tương tác và ứng dụng thực tế.
+                    </p>
+                    <div class="subject-topics">
+                        <span class="topic-tag">Đại số</span>
+                        <span class="topic-tag">Hình học</span>
+                        <span class="topic-tag">Giải tích</span>
+                        <span class="topic-tag">Xác suất</span>
+                    </div>
+                    <div class="subject-stats">
+                        <div class="stat">
+                            <span class="stat-value">300+</span>
+                            <span class="stat-label">Bài tập</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">15</span>
+                            <span class="stat-label">Chủ đề</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subject-card physics">
+                    <div class="subject-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3 class="subject-title">Vật lý</h3>
+                    <p class="subject-description">
+                        Khám phá bí ẩn của vũ trụ từ hạt nhỏ nhất đến thiên hà. Thí nghiệm ảo 
+                        giúp hiểu rõ các định luật vật lý.
+                    </p>
+                    <div class="subject-topics">
+                        <span class="topic-tag">Cơ học</span>
+                        <span class="topic-tag">Điện học</span>
+                        <span class="topic-tag">Quang học</span>
+                        <span class="topic-tag">Lượng tử</span>
+                    </div>
+                    <div class="subject-stats">
+                        <div class="stat">
+                            <span class="stat-value">250+</span>
+                            <span class="stat-label">Bài tập</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">20</span>
+                            <span class="stat-label">Thí nghiệm</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subject-card chemistry">
+                    <div class="subject-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="subject-title">Hóa học</h3>
+                    <p class="subject-description">
+                        Hiểu bản chất của vật chất và phản ứng hóa học. Thí nghiệm ảo an toàn 
+                        để khám phá thế giới phân tử.
+                    </p>
+                    <div class="subject-topics">
+                        <span class="topic-tag">Vô cơ</span>
+                        <span class="topic-tag">Hữu cơ</span>
+                        <span class="topic-tag">Phân tích</span>
+                        <span class="topic-tag">Sinh hóa</span>
+                    </div>
+                    <div class="subject-stats">
+                        <div class="stat">
+                            <span class="stat-value">200+</span>
+                            <span class="stat-label">Bài tập</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">25</span>
+                            <span class="stat-label">Phản ứng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="why-choose-content">
+                <div class="why-choose-text">
+                    <h2 class="section-title">Tại sao chọn EduVerse?</h2>
+                    <p class="section-subtitle">
+                        Chúng tôi kết hợp công nghệ giáo dục tiên tiến với phương pháp dạy học hiệu quả
+                    </p>
+                    
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Học tập thông minh</h4>
+                                <p>AI cá nhân hóa đề xuất nội dung phù hợp với trình độ và sở thích của bạn</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Cộng đồng học tập</h4>
+                                <p>Kết nối với bạn bè, thi đua lành mạnh và học hỏi lẫn nhau</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Chứng nhận uy tín</h4>
+                                <p>Nhận chứng nhận hoàn thành khóa học và thành tích xuất sắc</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Học mọi lúc mọi nơi</h4>
+                                <p>Truy cập nền tảng 24/7 trên mọi thiết bị, học theo lịch trình riêng</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="why-choose-visual">
+                    <div class="achievement-cards">
+                        <div class="achievement-card">
+                            <i class="fas fa-trophy"></i>
+                            <h4>Thành tựu mới</h4>
+                            <p>Hoàn thành 10 bài tập liên tiếp</p>
+                        </div>
+                        
+                        <div class="achievement-card">
+                            <i class="fas fa-fire"></i>
+                            <h4>Streak 7 ngày</h4>
+                            <p>Duy trì học tập hàng ngày</p>
+                        </div>
+                        
+                        <div class="achievement-card">
+                            <i class="fas fa-star"></i>
+                            <h4>Top 10%</h4>
+                            <p>Xếp hạng cao trong lớp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Sẵn sàng bắt đầu hành trình học tập?</h2>
+                <p class="cta-subtitle">
+                    Tham gia cùng hàng nghìn học sinh đã cải thiện kết quả học tập với EduVerse
+                </p>
+                <div class="cta-buttons">
+                    <a href="index.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i>
+                        Bắt đầu miễn phí
+                    </a>
+                    <div class="cta-note">
+                        <i class="fas fa-check-circle"></i>
+                        Hoàn toàn miễn phí • Không cần đăng ký
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-atom"></i>
+                        <span>EduVerse</span>
+                    </div>
+                    <p class="footer-description">
+                        Nền tảng học tập hiện đại biến việc học Toán - Lý - Hóa thành hành trình khám phá thú vị.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Tính năng</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Game học tập</a></li>
+                        <li><a href="lab.html">Thí nghiệm ảo</a></li>
+                        <li><a href="research.html">Nghiên cứu khoa học</a></li>
+                        <li><a href="#features">Tổng quan tính năng</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Môn học</h4>
+                    <ul class="footer-links">
+                        <li><a href="#subjects">Toán học</a></li>
+                        <li><a href="#subjects">Vật lý</a></li>
+                        <li><a href="#subjects">Hóa học</a></li>
+                        <li><a href="#subjects">Tích hợp liên môn</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Hỗ trợ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Liên hệ</a></li>
+                        <li><a href="#guide">Hướng dẫn sử dụng</a></li>
+                        <li><a href="#privacy">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 EduVerse. Được phát triển với ❤️ cho giáo dục Việt Nam.
+                </p>
+                <div class="footer-tech">
+                    <span>Powered by</span>
+                    <div class="tech-badges">
+                        <span class="tech-badge">arXiv API</span>
+                        <span class="tech-badge">PHET Simulations</span>
+                        <span class="tech-badge">AI Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <i class="fas fa-atom"></i>
+                    <span>EduVerse</span>
+                </div>
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="home.html" class="mobile-nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Trang chủ</span>
+                </a>
+                <a href="index.html" class="mobile-nav-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Game học tập</span>
+                </a>
+                <a href="lab.html" class="mobile-nav-link">
+                    <i class="fas fa-flask"></i>
+                    <span>Phòng thí nghiệm</span>
+                </a>
+                <a href="research.html" class="mobile-nav-link">
+                    <i class="fas fa-search"></i>
+                    <span>Nghiên cứu khoa học</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js?v=1.0"></script>
+    <script src="js/home.js?v=1.0"></script>
+    
+    <!-- Mobile Menu Fallback -->
+    <script>
+        // Fallback mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+            const mobileMenuClose = document.querySelector('.mobile-menu-close');
+            
+            console.log('🔧 Mobile menu fallback initialized');
+            
+            if (mobileMenuToggle && mobileMenuOverlay) {
+                mobileMenuToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('📱 Fallback toggle clicked');
+                    mobileMenuOverlay.classList.toggle('active');
+                    document.body.classList.toggle('menu-open');
+                    mobileMenuToggle.classList.toggle('active');
+                });
+            }
+            
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('📱 Fallback close clicked');
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                    mobileMenuToggle.classList.remove('active');
+                });
+            }
+            
+            // Close on overlay click
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', function(e) {
+                    if (e.target === mobileMenuOverlay) {
+                        console.log('📱 Fallback overlay clicked');
+                        mobileMenuOverlay.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                        mobileMenuToggle.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Close on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+                    console.log('📱 Fallback escape pressed');
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                    mobileMenuToggle.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(registrationError => console.log('SW registration failed'));
+            });
+        }
+    </script>
+</body>
+</html>
