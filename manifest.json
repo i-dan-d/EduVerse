@@ -1,33 +1,94 @@
 {
-    "name": "Game Học Tập - Toán Lý Hóa",
-    "short_name": "EduGame",
-    "description": "Game học tập tương tác cho học sinh THCS và THPT",
-    "version": "1.0.0",
-    "manifest_version": 3,
-    "start_url": "/",
+    "name": "EduVerse - Game Học Tập Toán Lý Hóa",
+    "short_name": "EduVerse",
+    "description": "Game học tập tương tác cho học sinh THCS và THPT với phòng thí nghiệm ảo và nghiên cứu khoa học",
+    "version": "2.0.0",
+    "start_url": "/home.html",
     "display": "standalone",
-    "background_color": "#ffffff",
+    "background_color": "#667eea",
     "theme_color": "#4F46E5",
-    "orientation": "portrait-primary",
+    "orientation": "any",
     "icons": [
         {
-            "src": "/icon-192.png",
+            "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9InVybCgjZ3JhZGllbnQwXzFfMSkiLz4KPHN2ZyB4PSI0OCIgeT0iNDgiIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0tMiAxNWwtNS01IDEuNDEtMS40MUw4IDEyLjE3bDMuNTktMy41OEwxMyAxMGwtMiAyeiIvPgo8L3N2Zz4KPHN2ZyB4PSI2NCIgeT0iNjQiIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC43Ij4KPHN2ZyB4PSI5NiIgeT0iOTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ij4KPHN2ZyB4PSIzMiIgeT0iMzIiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHN2ZyB4PSI2NCIgeT0iNjQiIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xMi4wNyAyQzYuNTUgMiAyLjA3IDYuNDggMi4wNyAxMnM0LjQ4IDEwIDEwIDEwYzUuNTIgMCAxMC00LjQ4IDEwLTEwUzE3LjU5IDIgMTIuMDcgMnptMS45MyA2djZsNCAyLjI1LS43MyAxLjMtNS4yNy0zVjhoMS4wN3oiLz4KPC9zdmc+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF8xXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjE5MiIgeTI9IjE5MiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjNjY3ZWVhIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzc2NGJhMiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=",
             "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable any"
+            "type": "image/svg+xml",
+            "purpose": "any"
         },
         {
-            "src": "/icon-512.png", 
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable any"
+            "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iNjQiIGZpbGw9InVybCgjZ3JhZGllbnQwXzFfMSkiLz4KPHN2ZyB4PSIxMjgiIHk9IjEyOCIgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptLTIgMTVsLTUtNSAxLjQxLTEuNDFMOCAxMi4xN2wzLjU5LTMuNThMMTMgMTBsLTIgMnoiLz4KPC9zdmc+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF8xXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjUxMiIgeTI9IjUxMiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjNjY3ZWVhIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzc2NGJhMiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=",
+            "sizes": "512x512", 
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iOTYiIGZpbGw9InVybCgjZ3JhZGllbnQwXzFfMSkiLz4KPHN2ZyB4PSI0OCIgeT0iNDgiIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0tMiAxNWwtNS01IDEuNDEtMS40MUw4IDEyLjE3bDMuNTktMy41OEwxMyAxMGwtMiAyeiIvPgo8L3N2Zz4KPHN2ZyB4PSI2NCIgeT0iNjQiIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC43Ij4KPHN2ZyB4PSI5NiIgeT0iOTYiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ij4KPHN2ZyB4PSIzMiIgeT0iMzIiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IndoaXRlIj4KPHN2ZyB4PSI2NCIgeT0iNjQiIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xMi4wNyAyQzYuNTUgMiAyLjA3IDYuNDggMi4wNyAxMnM0LjQ4IDEwIDEwIDEwYzUuNTIgMCAxMC00LjQ4IDEwLTEwUzE3LjU5IDIgMTIuMDcgMnptMS45MyA2djZsNCAyLjI1LS43MyAxLjMtNS4yNy0zVjhoMS4wN3oiLz4KPC9zdmc+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF8xXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjE5MiIgeTI9IjE5MiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjNjY3ZWVhIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzc2NGJhMiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=",
+            "sizes": "192x192",
+            "type": "image/svg+xml", 
+            "purpose": "maskable"
         }
     ],
-    "categories": ["education", "games"],
+    "screenshots": [
+        {
+            "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI3MjAiIHZpZXdCb3g9IjAgMCAxMjgwIDcyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI2dyYWRpZW50MF8xXzEpIi8+Cjx0ZXh0IHg9IjY0MCIgeT0iMzYwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSI2NCIgZm9udC1mYW1pbHk9IkFyaWFsIj5FZHVWZXJzZTwvdGV4dD4KPHN2ZyB4PSI1NjAiIHk9IjI4MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxNjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptLTIgMTVsLTUtNSAxLjQxLTEuNDFMOCAxMi4xN2wzLjU5LTMuNThMMTMgMTBsLTIgMnoiLz4KPC9zdmc+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF8xXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjEyODAiIHkyPSI3MjAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzY2N2VlYSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM3NjRiYTIiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K",
+            "sizes": "1280x720",
+            "type": "image/svg+xml",
+            "form_factor": "wide",
+            "label": "EduVerse Desktop App"
+        },
+        {
+            "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjEyODAiIHZpZXdCb3g9IjAgMCA2NDAgMTI4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSIxMjgwIiBmaWxsPSJ1cmwoI2dyYWRpZW50MF8xXzEpIi8+Cjx0ZXh0IHg9IjMyMCIgeT0iNjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSI0OCIgZm9udC1mYW1pbHk9IkFyaWFsIj5FZHVWZXJzZTwvdGV4dD4KPHN2ZyB4PSIyNDAiIHk9IjU2MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxNjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptLTIgMTVsLTUtNSAxLjQxLTEuNDFMOCAxMi4xN2wzLjU5LTMuNThMMTMgMTBsLTIgMnoiLz4KPC9zdmc+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF8xXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjY0MCIgeTI9IjEyODAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzY2N2VlYSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM3NjRiYTIiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K",
+            "sizes": "640x1280",
+            "type": "image/svg+xml",
+            "form_factor": "narrow",
+            "label": "EduVerse Mobile App"
+        }
+    ],
+    "categories": ["education", "games", "productivity"],
     "lang": "vi",
     "scope": "/",
-    "permissions": [
-        "storage"
+    "prefer_related_applications": false,
+    "related_applications": [],
+    "shortcuts": [
+        {
+            "name": "Game Học Tập",
+            "short_name": "Game",
+            "description": "Chơi game học tập ngay",
+            "url": "/index.html",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNCIgZmlsbD0iIzY2N2VlYSIvPgo8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptLTIgMTVsLTUtNSAxLjQxLTEuNDFMOCAxMi4xN2wzLjU5LTMuNThMMTMgMTBsLTIgMnoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=",
+                    "sizes": "96x96",
+                    "type": "image/svg+xml"
+                }
+            ]
+        },
+        {
+            "name": "Phòng Lab",
+            "short_name": "Lab",
+            "description": "Thí nghiệm ảo tương tác",
+            "url": "/lab.html",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNCIgZmlsbD0iIzEwYjk4MSIvPgo8cGF0aCBkPSJNOSAydjJIMTB2MmgtMWMtMS4xIDAtMiAuOS0yIDJ2NGMwIDEuMSAuOSAyIDIgMmg2YzEuMSAwIDItLjkgMi0ydi00YzAtMS4xLS45LTItMi0yaDFWNGgxVjJIOXptNSAxNGgtNGwtMSAxaDZsLTEtMXoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=",
+                    "sizes": "96x96",
+                    "type": "image/svg+xml"
+                }
+            ]
+        },
+        {
+            "name": "Nghiên Cứu",
+            "short_name": "Research",
+            "description": "Tìm kiếm nghiên cứu khoa học",
+            "url": "/research.html",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNCIgZmlsbD0iIzM5OGVmNCIvPgo8cGF0aCBkPSJNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QzE1LjQxIDEyLjU5IDE2IDExLjExIDE2IDkuNSAxNiA1LjkxIDEzLjA5IDMgOS41IDNTMyA1LjkxIDMgOS41IDUuOTEgMTYgOS41IDE2YzEuNjEgMCAzLjA5LS41OSA0LjIzLTEuNTdsLjI3LjI4di43OWw1IDQuOTlMMjAuNDkgMTkgMTUuNSAxNHptLTYgMEM3LjAxIDE0IDUgMTEuOTkgNSA5LjVTNy4wMSA1IDkuNSA1IDEzIDcuMDEgMTMgOS41IDEzIDExLjk5IDkuNSAxNHoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=",
+                    "sizes": "96x96",
+                    "type": "image/svg+xml"
+                }
+            ]
+        }
     ]
 }
 

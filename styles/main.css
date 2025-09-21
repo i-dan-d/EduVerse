@@ -4559,6 +4559,307 @@ select option:focus {
 }
 
 /* ==========================================
+   PWA INSTALL FUNCTIONALITY
+   ========================================== */
+
+/* Install Button in Navigation */
+.install-btn {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #059669, #047857);
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.install-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(5, 150, 105, 0.4);
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.install-btn:active {
+    transform: translateY(0);
+}
+
+.install-btn.install-available {
+    animation: installPulse 2s infinite;
+}
+
+.install-btn i {
+    font-size: 1rem;
+}
+
+.install-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #f59e0b;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes installPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Mobile Install Prompt */
+.mobile-install-prompt {
+    position: fixed;
+    bottom: -100px;
+    left: 1rem;
+    right: 1rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    transition: all 0.3s ease;
+    border: 2px solid #e2e8f0;
+}
+
+.mobile-install-prompt.show {
+    bottom: 1rem;
+}
+
+.mobile-install-content {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.mobile-install-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.mobile-install-text {
+    flex: 1;
+}
+
+.mobile-install-text h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.mobile-install-text p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.mobile-install-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.mobile-install-btn {
+    background: linear-gradient(135deg, #059669, #047857);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-install-btn:hover {
+    background: linear-gradient(135deg, #10b981, #059669);
+    transform: translateY(-1px);
+}
+
+.mobile-dismiss-btn {
+    background: #f1f5f9;
+    color: #64748b;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-dismiss-btn:hover {
+    background: #e2e8f0;
+    color: #374151;
+}
+
+/* Install Notifications */
+.install-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 400px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 10001;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    border-left: 4px solid #3b82f6;
+}
+
+.install-notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.install-notification.success {
+    border-left-color: #10b981;
+}
+
+.install-notification.error {
+    border-left-color: #ef4444;
+}
+
+.install-notification.info {
+    border-left-color: #3b82f6;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.notification-message {
+    flex: 1;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #374151;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.notification-close:hover {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .install-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+    
+    .install-btn .install-text {
+        display: none;
+    }
+    
+    .mobile-install-prompt {
+        left: 0.5rem;
+        right: 0.5rem;
+    }
+    
+    .mobile-install-content {
+        padding: 0.75rem;
+    }
+    
+    .mobile-install-text h4 {
+        font-size: 0.9rem;
+    }
+    
+    .mobile-install-text p {
+        font-size: 0.8rem;
+    }
+    
+    .install-notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .install-btn {
+        padding: 0.5rem;
+    }
+    
+    .install-badge {
+        display: none;
+    }
+}
+
+/* PWA Standalone Mode Adjustments */
+@media (display-mode: standalone) {
+    .install-btn {
+        display: none !important;
+    }
+    
+    .mobile-install-prompt {
+        display: none !important;
+    }
+    
+    /* Add more app-like spacing when in standalone mode */
+    .main-header {
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* iOS Safari specific adjustments */
+@supports (-webkit-touch-callout: none) {
+    .mobile-install-prompt {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* ==========================================
    PHET SIMULATION MODAL
    ========================================== */
 
