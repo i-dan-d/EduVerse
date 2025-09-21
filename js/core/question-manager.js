@@ -108,3 +108,4 @@ class QuestionManager {
 // Make it globally available
 window.QuestionManager = QuestionManager;
 
+

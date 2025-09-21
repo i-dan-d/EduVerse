@@ -273,7 +273,7 @@ body.menu-open {
 
 /* General subject card base styles (for game and lab pages) */
 .subject-card {
-    background: rgba(255, 255, 255, 0.95) !important;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: var(--radius-xl);
     padding: var(--space-8);
     text-align: center;
@@ -301,9 +301,11 @@ body.menu-open {
 }
 
 .subject-card.selected .subject-icon {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: white;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 1);
+    color: var(--primary-color);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 }
 
 .subject-card.selected h4 {
@@ -336,24 +338,28 @@ body.menu-open {
     width: 80px;
     height: 80px;
     margin: 0 auto var(--space-4);
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: var(--font-size-3xl);
     color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .subject-card h4 {
     font-size: var(--font-size-xl);
     font-weight: 600;
     margin-bottom: var(--space-2);
-    color: #1e293b !important; /* Dark slate for good contrast */
+    color: white !important; /* White text for gradient background */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .subject-card p {
-    color: #64748b !important; /* Gray-500 for secondary text */
+    color: #f9fcff !important; /* Gray-500 for secondary text */
     font-size: var(--font-size-sm);
 }
 
@@ -1459,12 +1465,15 @@ select option:focus {
 }
 
 .badge {
-    background: var(--primary-color);
+    background: rgba(255, 255, 255, 0.25);
     color: white;
     padding: var(--space-1) var(--space-3);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
     font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .simulation-grid {
@@ -1524,7 +1533,7 @@ select option:focus {
 /* Lab Subject Card Selection Styling */
 .lab-container .subject-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.95) !important;
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
     border-radius: var(--radius-xl);
     padding: var(--space-6);
     box-shadow: var(--shadow-lg);
@@ -1549,9 +1558,11 @@ select option:focus {
 }
 
 .lab-container .subject-card.selected .subject-icon {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: white;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 1);
+    color: var(--primary-color);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 }
 
 .lab-container .subject-card.selected h3 {
@@ -1583,31 +1594,35 @@ select option:focus {
 .lab-container .subject-icon {
     width: 60px;
     height: 60px;
-    background: var(--primary-light);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto var(--space-4);
     font-size: var(--font-size-2xl);
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     transition: all var(--transition-normal);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .lab-container .subject-card h3 {
     font-size: var(--font-size-xl);
     margin-bottom: var(--space-2);
     text-align: center;
-    color: #1e293b; /* Dark slate for good contrast */
+    color: white !important; /* White text for gradient background */
     font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .lab-container .subject-card p {
-    color: #64748b; /* Gray-500 for secondary text */
+    color: rgba(255, 255, 255, 0.9) !important; /* Light text for gradient background */
     text-align: center;
     font-size: var(--font-size-sm);
     line-height: 1.5;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Level Screen Content */
@@ -2553,7 +2568,7 @@ select option:focus {
 .subjects .subject-icon {
     width: 60px;
     height: 60px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -2562,6 +2577,10 @@ select option:focus {
     font-size: 1.5rem;
     position: relative;
     z-index: 1;
+    color: var(--primary-color);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .subjects .subject-title {
@@ -2570,14 +2589,18 @@ select option:focus {
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .subjects .subject-description {
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    opacity: 0.9;
+    opacity: 0.95;
     position: relative;
     z-index: 1;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .subjects .subject-topics {
@@ -2595,6 +2618,8 @@ select option:focus {
     border-radius: 12px;
     font-size: 0.85rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 500;
 }
 
 .subjects .subject-stats {
@@ -2613,11 +2638,15 @@ select option:focus {
     font-weight: 700;
     display: block;
     margin-bottom: 0.25rem;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .subjects .stat-label {
     font-size: 0.85rem;
-    opacity: 0.8;
+    opacity: 0.85;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Why Choose Section */
@@ -3426,12 +3455,29 @@ select option:focus {
     border-radius: 8px;
     font-size: 0.9rem;
     background: white;
+    color: #1e293b;
     cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .filter-group select:focus {
     outline: none;
     border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.filter-group select option {
+    background: white;
+    color: #1e293b;
+    padding: 0.5rem;
+    font-weight: 500;
+}
+
+.filter-group select option:checked {
+    background: #667eea;
+    color: white;
 }
 
 /* Search Suggestions */
