@@ -5,6 +5,7 @@
 
 class PWAInstallManager {
     constructor() {
+        console.log('🚀 PWA Install Manager constructor called');
         this.deferredPrompt = null;
         this.installButton = null;
         this.isInstalled = false;
@@ -40,7 +41,7 @@ class PWAInstallManager {
     createInstallButton() {
         // Tạo nút cài đặt cho header
         const installBtnHTML = `
-            <button id="installBtn" class="install-btn" style="display: none;">
+            <button id="installBtn" class="install-btn">
                 <i class="fas fa-download"></i>
                 <span class="install-text">Cài đặt App</span>
                 <div class="install-badge">PWA</div>
@@ -49,12 +50,24 @@ class PWAInstallManager {
 
         // Thêm vào navigation
         const navContainer = document.querySelector('.nav-container');
+        console.log('🔍 Nav container found:', navContainer);
         if (navContainer) {
             navContainer.insertAdjacentHTML('beforeend', installBtnHTML);
             this.installButton = document.getElementById('installBtn');
+            console.log('📱 Install button created:', this.installButton);
             
             // Thêm event listener
             this.installButton.addEventListener('click', () => this.handleInstallClick());
+            
+            // Hiển thị nút ngay lập tức nếu chưa cài đặt
+            if (!this.isInstalled) {
+                this.installButton.style.display = 'flex';
+                console.log('✅ Install button displayed');
+            } else {
+                console.log('ℹ️ App already installed, hiding button');
+            }
+        } else {
+            console.error('❌ Nav container not found!');
         }
 
         // Tạo install card cho mobile
@@ -291,7 +304,9 @@ class PWAInstallManager {
 
 // Khởi tạo PWA Manager khi DOM đã sẵn sàng
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('🔧 PWA Install Manager loading...');
     window.pwaManager = PWAInstallManager.getInstance();
+    console.log('✅ PWA Install Manager initialized');
 });
 
 // Export cho sử dụng module
