@@ -79,16 +79,6 @@ function loadModels() {
         math: {
             thcs: [
                 { 
-                    id: 'math-graphing-lines', 
-                    name: 'Vẽ đồ thị đường thẳng', 
-                    description: 'Học cách vẽ và hiểu đồ thị đường thẳng', 
-                    icon: 'fas fa-chart-line',
-                    preview: 'https://phet.colorado.edu/sims/html/graphing-lines/latest/graphing-lines-600.png',
-                    url: 'https://phet.colorado.edu/sims/html/graphing-lines/latest/graphing-lines_all.html?locale=vi',
-                    difficulty: 'Dễ',
-                    duration: '15-20 phút'
-                },
-                { 
                     id: 'math-graphing-lines-advanced', 
                     name: 'Vẽ đồ thị đường thẳng nâng cao', 
                     description: 'Học cách vẽ và hiểu đồ thị đường thẳng với các tính năng nâng cao', 
@@ -107,6 +97,86 @@ function loadModels() {
                     url: 'https://phet.colorado.edu/sims/html/area-builder/latest/area-builder_all.html?locale=vi',
                     difficulty: 'Trung bình',
                     duration: '10-15 phút'
+                },
+                { 
+                    id: 'math-number-line-integers', 
+                    name: 'Đường thẳng số - Số nguyên', 
+                    description: 'Khám phá số nguyên trên đường thẳng số và các phép toán cơ bản', 
+                    icon: 'fas fa-minus',
+                    preview: 'https://phet.colorado.edu/sims/html/number-line-integers/latest/number-line-integers-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/number-line-integers/latest/number-line-integers_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '10-15 phút'
+                },
+                { 
+                    id: 'math-number-line-fractions', 
+                    name: 'Đường thẳng số - Phân số', 
+                    description: 'Hiểu phân số và các phép toán trên đường thẳng số', 
+                    icon: 'fas fa-divide',
+                    preview: 'https://phet.colorado.edu/sims/html/number-line-fractions/latest/number-line-fractions-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/number-line-fractions/latest/number-line-fractions_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'math-arithmetic', 
+                    name: 'Số học', 
+                    description: 'Luyện tập các phép toán cơ bản: cộng, trừ, nhân, chia', 
+                    icon: 'fas fa-calculator',
+                    preview: 'https://phet.colorado.edu/sims/html/arithmetic/latest/arithmetic-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/arithmetic/latest/arithmetic_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '10-15 phút'
+                },
+                { 
+                    id: 'math-expressions-and-equations', 
+                    name: 'Biểu thức và phương trình', 
+                    description: 'Xây dựng và giải phương trình đơn giản', 
+                    icon: 'fas fa-equals',
+                    preview: 'https://phet.colorado.edu/sims/html/expressions-and-equations/latest/expressions-and-equations-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/expressions-and-equations/latest/expressions-and-equations_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'math-algebra-melody', 
+                    name: 'Giai điệu đại số', 
+                    description: 'Học đại số qua âm nhạc và mẫu hình', 
+                    icon: 'fas fa-music',
+                    preview: 'https://phet.colorado.edu/sims/html/algebra-melody/latest/algebra-melody-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/algebra-melody/latest/algebra-melody_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'math-patterns-of-multiplicity', 
+                    name: 'Mẫu hình đa bội', 
+                    description: 'Khám phá mẫu hình trong số học và hình học', 
+                    icon: 'fas fa-cogs',
+                    preview: 'https://phet.colorado.edu/sims/html/patterns-of-multiplicity/latest/patterns-of-multiplicity-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/patterns-of-multiplicity/latest/patterns-of-multiplicity_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '20-25 phút'
+                },
+                { 
+                    id: 'math-fractions-equality', 
+                    name: 'Phân số bằng nhau', 
+                    description: 'So sánh và hiểu tính bằng nhau của phân số', 
+                    icon: 'fas fa-balance-scale',
+                    preview: 'https://phet.colorado.edu/sims/html/fractions-equality/latest/fractions-equality-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/fractions-equality/latest/fractions-equality_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '10-15 phút'
+                },
+                { 
+                    id: 'math-fractions-comparing', 
+                    name: 'So sánh phân số', 
+                    description: 'So sánh kích thước của các phân số khác nhau', 
+                    icon: 'fas fa-greater-than',
+                    preview: 'https://phet.colorado.edu/sims/html/fractions-comparing/latest/fractions-comparing-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/fractions-comparing/latest/fractions-comparing_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '15-20 phút'
                 }
             ],
             thpt: [

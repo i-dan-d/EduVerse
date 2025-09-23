@@ -576,3 +576,6 @@ document.addEventListener('DOMContentLoaded', () => {
 console.log('✅ Research UI Controller loaded');
 
 
+
+
+

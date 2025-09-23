@@ -337,3 +337,6 @@ window.addEventListener('resize', () => {
 console.log('✅ Homepage script loaded');
 
 
+
+
+
