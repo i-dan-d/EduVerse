@@ -199,6 +199,76 @@ function loadModels() {
                     url: 'https://phet.colorado.edu/sims/html/calculus-grapher/latest/calculus-grapher_all.html?locale=vi',
                     difficulty: 'Rất khó',
                     duration: '30-45 phút'
+                },
+                { 
+                    id: 'math-trig-tour', 
+                    name: 'Hành trình lượng giác', 
+                    description: 'Khám phá hàm lượng giác qua vòng tròn đơn vị', 
+                    icon: 'fas fa-circle',
+                    preview: 'https://phet.colorado.edu/sims/html/trig-tour/latest/trig-tour-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/trig-tour/latest/trig-tour_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '20-25 phút'
+                },
+                { 
+                    id: 'math-fractions-intro', 
+                    name: 'Giới thiệu phân số', 
+                    description: 'Hiểu phân số qua hình ảnh và phép toán nâng cao', 
+                    icon: 'fas fa-pizza-slice',
+                    preview: 'https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'math-probability', 
+                    name: 'Xác suất', 
+                    description: 'Mô phỏng xác suất và phân bố ngẫu nhiên', 
+                    icon: 'fas fa-dice',
+                    preview: 'https://phet.colorado.edu/sims/html/probability/latest/probability-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/probability/latest/probability_all.html?locale=vi',
+                    difficulty: 'Khó',
+                    duration: '25-30 phút'
+                },
+                { 
+                    id: 'math-least-squares-regression', 
+                    name: 'Hồi quy bình phương nhỏ nhất', 
+                    description: 'Phân tích dữ liệu và đường hồi quy', 
+                    icon: 'fas fa-chart-line',
+                    preview: 'https://phet.colorado.edu/sims/html/least-squares-regression/latest/least-squares-regression-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/least-squares-regression/latest/least-squares-regression_all.html?locale=vi',
+                    difficulty: 'Khó',
+                    duration: '30-45 phút'
+                },
+                { 
+                    id: 'math-blackbody-spectrum', 
+                    name: 'Phổ vật đen', 
+                    description: 'Mô hình toán học phổ bức xạ vật đen', 
+                    icon: 'fas fa-spectrum',
+                    preview: 'https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum_all.html?locale=vi',
+                    difficulty: 'Rất khó',
+                    duration: '30-45 phút'
+                },
+                { 
+                    id: 'math-unit-rates', 
+                    name: 'Tỷ lệ đơn vị', 
+                    description: 'Hiểu tỷ lệ và tốc độ trong toán ứng dụng', 
+                    icon: 'fas fa-tachometer-alt',
+                    preview: 'https://phet.colorado.edu/sims/html/unit-rates/latest/unit-rates-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/unit-rates/latest/unit-rates_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '20-25 phút'
+                },
+                { 
+                    id: 'math-make-unit-bending-light', 
+                    name: 'Đơn vị ánh sáng uốn cong', 
+                    description: 'Khám phá đơn vị toán học trong quang học', 
+                    icon: 'fas fa-lightbulb',
+                    preview: 'https://phet.colorado.edu/sims/html/make-unit-bending-light/latest/make-unit-bending-light-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/make-unit-bending-light/latest/make-unit-bending-light_all.html?locale=vi',
+                    difficulty: 'Khó',
+                    duration: '25-30 phút'
                 }
             ]
         },
@@ -223,6 +293,86 @@ function loadModels() {
                     url: 'https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_all.html?locale=vi',
                     difficulty: 'Trung bình',
                     duration: '20-25 phút'
+                },
+                { 
+                    id: 'physics-balancing-act', 
+                    name: 'Cân bằng hành động', 
+                    description: 'Khám phá mô-men và cân bằng tĩnh', 
+                    icon: 'fas fa-balance-scale',
+                    preview: 'https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'physics-balls-and-ramps', 
+                    name: 'Quả bóng và dốc', 
+                    description: 'Mô phỏng chuyển động lăn và va chạm', 
+                    icon: 'fas fa-futbol',
+                    preview: 'https://phet.colorado.edu/sims/html/balls-and-ramps/latest/balls-and-ramps-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/balls-and-ramps/latest/balls-and-ramps_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '10-15 phút'
+                },
+                { 
+                    id: 'physics-collisions', 
+                    name: 'Va chạm', 
+                    description: 'Hiểu bảo toàn động lượng và năng lượng', 
+                    icon: 'fas fa-bowling-ball',
+                    preview: 'https://phet.colorado.edu/sims/html/collision-lab/latest/collision-lab-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/collision-lab/latest/collision-lab_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'physics-energy-forms', 
+                    name: 'Dạng năng lượng', 
+                    description: 'Chuyển đổi giữa các dạng năng lượng', 
+                    icon: 'fas fa-bolt',
+                    preview: 'https://phet.colorado.edu/sims/html/energy-forms-and-changes/latest/energy-forms-and-changes-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/energy-forms-and-changes/latest/energy-forms-and-changes_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '20-25 phút'
+                },
+                { 
+                    id: 'physics-faraday', 
+                    name: 'Định luật Faraday', 
+                    description: 'Mô phỏng cảm ứng điện từ cơ bản', 
+                    icon: 'fas fa-magnet',
+                    preview: 'https://phet.colorado.edu/sims/html/faradays-electromagnetic-lab/latest/faradays-electromagnetic-lab-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/faradays-electromagnetic-lab/latest/faradays-electromagnetic-lab_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'physics-fractions-intro', 
+                    name: 'Giới thiệu phân số (vật lý)', 
+                    description: 'Áp dụng phân số trong đo lường vật lý', 
+                    icon: 'fas fa-ruler',
+                    preview: 'https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '10-15 phút'
+                },
+                { 
+                    id: 'physics-fractions', 
+                    name: 'Phân số trong vật lý', 
+                    description: 'Hiểu phân số qua ví dụ vật lý', 
+                    icon: 'fas fa-divide',
+                    preview: 'https://phet.colorado.edu/sims/html/fractions/latest/fractions-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/fractions/latest/fractions_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'physics-ladybug', 
+                    name: 'Bọ cánh cứng', 
+                    description: 'Mô phỏng chuyển động và vectơ', 
+                    icon: 'fas fa-bug',
+                    preview: 'https://phet.colorado.edu/sims/html/ladybug/latest/ladybug-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/ladybug/latest/ladybug_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '20-25 phút'
                 }
             ],
             thpt: [
@@ -245,6 +395,76 @@ function loadModels() {
                     url: 'https://phet.colorado.edu/sims/html/wave-interference/latest/wave-interference_all.html?locale=vi',
                     difficulty: 'Rất khó',
                     duration: '30-40 phút'
+                },
+                { 
+                    id: 'physics-blackbody-spectrum', 
+                    name: 'Phổ vật đen', 
+                    description: 'Mô hình bức xạ vật đen và định luật Planck', 
+                    icon: 'fas fa-spectrum',
+                    preview: 'https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum_all.html?locale=vi',
+                    difficulty: 'Rất khó',
+                    duration: '30-45 phút'
+                },
+                { 
+                    id: 'physics-charges-and-fields', 
+                    name: 'Điện tích và trường điện', 
+                    description: 'Mô phỏng trường điện và đường sức', 
+                    icon: 'fas fa-plus-circle',
+                    preview: 'https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_all.html?locale=vi',
+                    difficulty: 'Khó',
+                    duration: '25-35 phút'
+                },
+                { 
+                    id: 'physics-circuit-construction-ac', 
+                    name: 'Xây dựng mạch điện AC', 
+                    description: 'Mạch điện xoay chiều và dao động', 
+                    icon: 'fas fa-plug',
+                    preview: 'https://phet.colorado.edu/sims/html/circuit-construction-kit-ac/latest/circuit-construction-kit-ac-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/circuit-construction-kit-ac/latest/circuit-construction-kit-ac_all.html?locale=vi',
+                    difficulty: 'Khó',
+                    duration: '30-40 phút'
+                },
+                { 
+                    id: 'physics-fourier', 
+                    name: 'Phân tích Fourier', 
+                    description: 'Phân tích sóng hài và phổ tần số', 
+                    icon: 'fas fa-wave-square',
+                    preview: 'https://phet.colorado.edu/sims/html/fourier/latest/fourier-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/fourier/latest/fourier_all.html?locale=vi',
+                    difficulty: 'Rất khó',
+                    duration: '35-50 phút'
+                },
+                { 
+                    id: 'physics-fraction-matcher', 
+                    name: 'Ghép phân số (vật lý)', 
+                    description: 'Áp dụng phân số trong tính toán vật lý nâng cao', 
+                    icon: 'fas fa-puzzle-piece',
+                    preview: 'https://phet.colorado.edu/sims/html/fraction-matcher/latest/fraction-matcher-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/fraction-matcher/latest/fraction-matcher_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '20-25 phút'
+                },
+                { 
+                    id: 'physics-gas-properties', 
+                    name: 'Tính chất khí', 
+                    description: 'Định luật khí lý tưởng và nhiệt động học', 
+                    icon: 'fas fa-cloud',
+                    preview: 'https://phet.colorado.edu/sims/html/gas-properties/latest/gas-properties-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/gas-properties/latest/gas-properties_all.html?locale=vi',
+                    difficulty: 'Khó',
+                    duration: '25-30 phút'
+                },
+                { 
+                    id: 'physics-greenhouse', 
+                    name: 'Nhà kính', 
+                    description: 'Mô phỏng hiệu ứng nhà kính và khí hậu', 
+                    icon: 'fas fa-seedling',
+                    preview: 'https://phet.colorado.edu/sims/html/greenhouse-effect/latest/greenhouse-effect-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/greenhouse-effect/latest/greenhouse-effect_all.html?locale=vi',
+                    difficulty: 'Khó',
+                    duration: '25-35 phút'
                 }
             ]
         },
@@ -269,7 +489,88 @@ function loadModels() {
                     url: 'https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale_all.html?locale=vi',
                     difficulty: 'Trung bình',
                     duration: '15-25 phút'
+                },
+                { 
+                    id: 'chemistry-atomic-interactions', 
+                    name: 'Tương tác nguyên tử', 
+                    description: 'Khám phá lực giữa các nguyên tử và phân tử', 
+                    icon: 'fas fa-magnet',
+                    preview: 'https://phet.colorado.edu/sims/html/atomic-interactions/latest/atomic-interactions-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/atomic-interactions/latest/atomic-interactions_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'chemistry-color-vision', 
+                    name: 'Tầm nhìn màu sắc', 
+                    description: 'Hiểu màu sắc và sự hấp thụ ánh sáng trong hóa học', 
+                    icon: 'fas fa-palette',
+                    preview: 'https://phet.colorado.edu/sims/html/color-vision/latest/color-vision-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/color-vision/latest/color-vision_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '10-15 phút'
+                },
+                { 
+                    id: 'chemistry-concentrations', 
+                    name: 'Nồng độ', 
+                    description: 'Khám phá nồng độ dung dịch và pha loãng', 
+                    icon: 'fas fa-flask',
+                    preview: 'https://phet.colorado.edu/sims/html/concentrations/latest/concentrations-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/concentrations/latest/concentrations_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'chemistry-density', 
+                    name: 'Mật độ', 
+                    description: 'Hiểu khái niệm mật độ và ứng dụng trong hóa học', 
+                    icon: 'fas fa-weight',
+                    preview: 'https://phet.colorado.edu/sims/html/density/latest/density-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/density/latest/density_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '10-15 phút'
+                },
+                { 
+                    id: 'chemistry-masses-and-springs', 
+                    name: 'Khối lượng và lò xo', 
+                    description: 'Mô phỏng lực đàn hồi và đo lường khối lượng', 
+                    icon: 'fas fa-compress-arrows-alt',
+                    preview: 'https://phet.colorado.edu/sims/html/masses-and-springs/latest/masses-and-springs-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/masses-and-springs/latest/masses-and-springs_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'chemistry-pendulum-lab', 
+                    name: 'Phòng thí nghiệm con lắc', 
+                    description: 'Khám phá chu kỳ con lắc và ứng dụng hóa học vật lý', 
+                    icon: 'fas fa-clock',
+                    preview: 'https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '15-20 phút'
+                },
+                { 
+                    id: 'chemistry-states-of-matter', 
+                    name: 'Trạng thái vật chất', 
+                    description: 'Mô phỏng các trạng thái rắn, lỏng, khí', 
+                    icon: 'fas fa-snowflake',
+                    preview: 'https://phet.colorado.edu/sims/html/states-of-matter-basics/latest/states-of-matter-basics-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/states-of-matter-basics/latest/states-of-matter-basics_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '20-25 phút'
+                },
+                { 
+                    id: 'chemistry-balancing-chemical-equations', 
+                    name: 'Cân bằng phương trình hóa học', 
+                    description: 'Học cách cân bằng phản ứng hóa học cơ bản', 
+                    icon: 'fas fa-balance-scale',
+                    preview: 'https://phet.colorado.edu/sims/html/balancing-chemical-equations/latest/balancing-chemical-equations-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/balancing-chemical-equations/latest/balancing-chemical-equations_all.html?locale=vi',
+                    difficulty: 'Dễ',
+                    duration: '15-20 phút'
                 }
+
             ],
             thpt: [
                 { 
@@ -291,6 +592,76 @@ function loadModels() {
                     url: 'https://phet.colorado.edu/sims/html/reactions-and-rates/latest/reactions-and-rates_all.html?locale=vi',
                     difficulty: 'Rất khó',
                     duration: '30-40 phút'
+                },
+                { 
+                    id: 'chemistry-acid-base-solutions', 
+                    name: 'Dung dịch axit-bazơ', 
+                    description: 'Mô phỏng tính axit-bazơ và độ pH nâng cao', 
+                    icon: 'fas fa-vial',
+                    preview: 'https://phet.colorado.edu/sims/html/acid-base-solutions/latest/acid-base-solutions-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/acid-base-solutions/latest/acid-base-solutions_all.html?locale=vi',
+                    difficulty: 'Khó',
+                    duration: '25-30 phút'
+                },
+                { 
+                    id: 'chemistry-beers-law-lab', 
+                    name: 'Phòng thí nghiệm định luật Beer', 
+                    description: 'Phân tích hấp thụ ánh sáng và nồng độ', 
+                    icon: 'fas fa-chart-line',
+                    preview: 'https://phet.colorado.edu/sims/html/beers-law-lab/latest/beers-law-lab-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/beers-law-lab/latest/beers-law-lab_all.html?locale=vi',
+                    difficulty: 'Khó',
+                    duration: '30-40 phút'
+                },
+                { 
+                    id: 'chemistry-bending-light', 
+                    name: 'Ánh sáng uốn cong', 
+                    description: 'Snell\'s law và khúc xạ trong hóa học quang học', 
+                    icon: 'fas fa-lightbulb',
+                    preview: 'https://phet.colorado.edu/sims/html/bending-light/latest/bending-light-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/bending-light/latest/bending-light_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '20-25 phút'
+                },
+                { 
+                    id: 'chemistry-curve-fitting', 
+                    name: 'Điều chỉnh đường cong', 
+                    description: 'Phân tích dữ liệu và hồi quy trong thí nghiệm hóa học', 
+                    icon: 'fas fa-chart-area',
+                    preview: 'https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_all.html?locale=vi',
+                    difficulty: 'Khó',
+                    duration: '25-35 phút'
+                },
+                { 
+                    id: 'chemistry-electrolysis', 
+                    name: 'Điện phân', 
+                    description: 'Mô phỏng quá trình điện phân dung dịch', 
+                    icon: 'fas fa-bolt',
+                    preview: 'https://phet.colorado.edu/sims/html/electrolysis/latest/electrolysis-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/electrolysis/latest/electrolysis_all.html?locale=vi',
+                    difficulty: 'Rất khó',
+                    duration: '30-45 phút'
+                },
+                { 
+                    id: 'chemistry-gas-properties', 
+                    name: 'Tính chất khí', 
+                    description: 'Định luật khí lý tưởng và ứng dụng', 
+                    icon: 'fas fa-cloud',
+                    preview: 'https://phet.colorado.edu/sims/html/gas-properties/latest/gas-properties-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/gas-properties/latest/gas-properties_all.html?locale=vi',
+                    difficulty: 'Khó',
+                    duration: '25-30 phút'
+                },
+                { 
+                    id: 'chemistry-island-explore-masses', 
+                    name: 'Khám phá khối lượng trên đảo', 
+                    description: 'Đo lường và cân bằng khối lượng trong phản ứng', 
+                    icon: 'fas fa-island-tropical',
+                    preview: 'https://phet.colorado.edu/sims/html/island-explore-masses/latest/island-explore-masses-600.png',
+                    url: 'https://phet.colorado.edu/sims/html/island-explore-masses/latest/island-explore-masses_all.html?locale=vi',
+                    difficulty: 'Trung bình',
+                    duration: '20-25 phút'
                 }
             ]
         }
