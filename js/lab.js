@@ -481,7 +481,7 @@ function loadModels() {
                     duration: '15-20 phút'
                 },
                 { 
-                    id: 'chemistry-ph-scale', 
+                    id: 'chemistry-ph-scale',
                     name: 'Thang pH', 
                     description: 'Khám phá tính axit và bazơ', 
                     icon: 'fas fa-vial',
