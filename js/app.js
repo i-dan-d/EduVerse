@@ -158,10 +158,29 @@ class GameApp {
             
             // Load questions using QuestionManager
             this.questionManager.loadQuestions();
-            const questions = this.questionManager.availableQuestions;
+            let questions = this.questionManager.availableQuestions;
+            
+            // Filter questions by selected subject
+            console.log('🔍 GameApp: All available questions:', questions.length);
+            console.log('🔍 GameApp: Config subject:', config.subject);
+            
+            if (config.subject && config.subject !== 'all') {
+                const originalCount = questions.length;
+                questions = questions.filter(q => q.subject === config.subject);
+                console.log(`🎯 GameApp: Filtered questions for subject "${config.subject}": ${questions.length}/${originalCount} questions`);
+                
+                // Debug: Show sample questions
+                if (questions.length > 0) {
+                    console.log('📝 Sample questions:', questions.slice(0, 3).map(q => ({
+                        id: q.id,
+                        subject: q.subject,
+                        question: q.question.substring(0, 50) + '...'
+                    })));
+                }
+            }
             
             if (!questions || questions.length === 0) {
-                throw new Error('No questions available');
+                throw new Error(`No questions available for subject: ${config.subject}`);
             }
             
             // Start the game
