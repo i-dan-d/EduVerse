@@ -38,8 +38,8 @@ class GameApp {
             // Initialize UI Manager
             window.UIManager.initialize();
             
-            // Initialize Question Manager
-            this.questionManager = new QuestionManager();
+            // Initialize Question Manager (singleton)
+            this.questionManager = window.QuestionManager.getInstance();
             
             // Setup event listeners
             this.setupEventListeners();
@@ -156,7 +156,7 @@ class GameApp {
                 console.warn('⚠️ GameApp: UIManager or gameCallbacks not available');
             }
             
-            // Load questions using QuestionManager
+            // Load questions using QuestionManager singleton
             this.questionManager.loadQuestions();
             let questions = this.questionManager.availableQuestions;
             

@@ -13,6 +13,16 @@ class QuestionManager {
     }
 
     /**
+     * Get singleton instance
+     */
+    static getInstance() {
+        if (!window.questionManagerInstance) {
+            window.questionManagerInstance = new QuestionManager();
+        }
+        return window.questionManagerInstance;
+    }
+
+    /**
      * Load questions from data
      */
     loadQuestions() {
@@ -107,6 +117,7 @@ class QuestionManager {
 
 // Make it globally available
 window.QuestionManager = QuestionManager;
+
 
 
 

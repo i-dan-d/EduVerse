@@ -104,10 +104,19 @@ class GameEngine {
             return;
         }
 
-        const question = this.questions[this.state.currentQuestion];
+        // Get random question from available questions
+        let question;
+        if (window.QuestionManager && window.QuestionManager.getInstance) {
+            // Use QuestionManager for random selection
+            const questionManager = window.QuestionManager.getInstance();
+            question = questionManager.getNextQuestion(this.state.subject, this.state.difficulty);
+        } else {
+            // Fallback to sequential selection
+            question = this.questions[this.state.currentQuestion];
+        }
         
         if (!question) {
-            console.error('❌ GameEngine: Question not found at index', this.state.currentQuestion);
+            console.error('❌ GameEngine: Question not found');
             this.endGame();
             return;
         }
@@ -125,6 +134,9 @@ class GameEngine {
         console.log('📝 GameEngine: Showing question', {
             number: this.state.currentQuestion + 1,
             total: this.state.totalQuestions,
+            questionId: question.id,
+            subject: question.subject,
+            difficulty: question.difficulty,
             shuffled: this.currentShuffledQuestion
         });
     }
