@@ -1,6 +1,6 @@
 {
-    "name": "EduVerse - Game Học Tập Toán Lý Hóa",
-    "short_name": "EduVerse",
+    "name": "EduVerse AI - Game Học Tập Toán Lý Hóa",
+    "short_name": "EduVerse AI",
     "description": "Game học tập tương tác cho học sinh THCS và THPT với phòng thí nghiệm ảo và nghiên cứu khoa học",
     "version": "2.0.0",
     "start_url": "/home.html",
@@ -34,14 +34,14 @@
             "sizes": "1280x720",
             "type": "image/svg+xml",
             "form_factor": "wide",
-            "label": "EduVerse Desktop App"
+            "label": "EduVerse AI Desktop App"
         },
         {
             "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjEyODAiIHZpZXdCb3g9IjAgMCA2NDAgMTI4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSIxMjgwIiBmaWxsPSJ1cmwoI2dyYWRpZW50MF8xXzEpIi8+Cjx0ZXh0IHg9IjMyMCIgeT0iNjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSI0OCIgZm9udC1mYW1pbHk9IkFyaWFsIj5FZHVWZXJzZTwvdGV4dD4KPHN2ZyB4PSIyNDAiIHk9IjU2MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxNjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptLTIgMTVsLTUtNSAxLjQxLTEuNDFMOCAxMi4xN2wzLjU5LTMuNThMMTMgMTBsLTIgMnoiLz4KPC9zdmc+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF8xXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjY0MCIgeTI9IjEyODAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzY2N2VlYSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM3NjRiYTIiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K",
             "sizes": "640x1280",
             "type": "image/svg+xml",
             "form_factor": "narrow",
-            "label": "EduVerse Mobile App"
+            "label": "EduVerse AI Mobile App"
         }
     ],
     "categories": ["education", "games", "productivity"],

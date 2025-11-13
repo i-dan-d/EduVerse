@@ -82,7 +82,7 @@ class PWAInstallManager {
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="mobile-install-text">
-                        <h4>Cài đặt EduVerse</h4>
+                        <h4>Cài đặt EduVerse AI</h4>
                         <p>Thêm vào màn hình chính để truy cập nhanh</p>
                     </div>
                     <div class="mobile-install-actions">
@@ -250,7 +250,7 @@ class PWAInstallManager {
         } else if (isAndroid) {
             return '📱 Trên Android: Nhấn menu (⋮) → "Add to Home screen"';
         } else if (isChrome) {
-            return '💻 Trên Chrome: Nhấn menu (⋮) → "Install EduVerse"';
+            return '💻 Trên Chrome: Nhấn menu (⋮) → "Install EduVerse AI"';
         } else {
             return '💡 Sử dụng Chrome hoặc Edge để cài đặt app về máy';
         }
